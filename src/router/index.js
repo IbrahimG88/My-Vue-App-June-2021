@@ -1,6 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import RegisterItem from "../components/RegisterItem.vue";
+import FormTemplate from "../components/FormTemplate.vue";
 
 Vue.use(VueRouter);
 
@@ -18,6 +20,16 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue"),
+  },
+  {
+    path: "/registeritem",
+    name: "Register item",
+    component: RegisterItem,
+  },
+  {
+    path: "/formtemplate",
+    name: "Form Template",
+    component: FormTemplate,
   },
 ];
 
